@@ -3,11 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Cinema</title>
   </head>
   <body>
-    <h1>Proyecto de M2</h1>
+    
+    <!--Barra de navegacion-->
+    <header>
+      <nav>
+          <div class="navbar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                  <span class="line line1"></span>
+                  <span class="line line2"></span>
+                  <span class="line line3"></span>
+                </div>  
+              <div class="logo">
+                <h1>CINEMAOK</h1>
+              </div>
+              <div class="menu-items">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pages/recomendaciones.html">Recomendaciones</a></li>
+                <li><a href="pages/nosotros.html">¿Qué es CinemaOK?</a></li>
 
+              </div>
+            </div>
+          </div>
+        </nav>
+
+    </header>
+    
+    <!--Contenido de la pagina-->
+    <main>
+      <article>
+        <h2 id="titleh2">Cartelera del mes</h2>
+      </article>
+      
+      <div class="containerCards">
+          <!-- Acá irán las tarjetas de las películas -->
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container-foot">
+        <div class="footer-content">
+          <p>&copy; 2024 CinemaOk. Todos los derechos reservados.</p>
+          <p>Contáctanos: cinemaok@gmail.com</p>
+        </div>
+      </div>
+    </footer>
+
+    
     <script src="./scripts/tempData.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
