@@ -28,6 +28,59 @@ article p {
     display: block;
 }
 
+  /* Estilos para el contenido dentro de la sección de cines */
+  .seccionCines.activo .opcionesCines {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Estilos para el contenido dentro de la sección de aplicaciones de streaming */
+  .seccionApps.activo .opcionesApps {
+    display: flex;
+    justify-content: space-between;
+  }
+
+    /* Estilos para las tarjetas de cines y aplicaciones */
+    .tarjeta {
+      width: 30%; /* Ancho de cada tarjeta */
+      margin-bottom: 20px; /* Espacio entre las tarjetas */
+      box-sizing: border-box; /* Incluye el relleno y el borde en el ancho total */
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      align-items: center;
+      display: flex; /* Agregamos display:flex para usar flexbox */
+      flex-direction: column; /* Establecemos la dirección de los elementos secundarios como columna */
+    }
+    
+    .tarjeta img {
+      width: 100%;
+      max-width: 200px; /* Tamaño máximo para la imagen */
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    
+    .tarjeta h3 {
+      font-size: 1rem; /* Tamaño de fuente */
+      margin-bottom: 5px;
+      text-align: center;
+    }
+    
+    .tarjeta p {
+      font-size: 0.8rem; /* Tamaño de fuente */
+      text-align: center;
+    }
+
+      .apps {
+        /*se agranda la imagen cuando paso el mouse*/
+        overflow: hidden;
+        transition:0.8s ease;
+    }
+  
+ .apps:hover{
+    transform: scale(1.04);
+ }
+ 
 
   /* Estilos para el formulario de recomendación adicional */
 form {
@@ -62,60 +115,11 @@ form input[type="submit"]:hover {
   }
 
 
-  /* Estilos para el contenido dentro de la sección de cines */
-.seccionCines.activo .opcionesCines {
-    display: flex;
-    justify-content: space-between;
-  }
+
   
-  /* Estilos para el contenido dentro de la sección de aplicaciones de streaming */
-  .seccionApps.activo .opcionesApps {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  /* Estilos para las tarjetas de cines y aplicaciones */
-  .tarjeta {
-    width: 30%; /* Ancho de cada tarjeta */
-    margin-bottom: 20px; /* Espacio entre las tarjetas */
-    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho total */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    align-items: center;
-    display: flex; /* Agregamos display:flex para usar flexbox */
-    flex-direction: column; /* Establecemos la dirección de los elementos secundarios como columna */
-  }
-  
-  .tarjeta img {
-    width: 100%;
-    max-width: 200px; /* Tamaño máximo para la imagen */
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .tarjeta h3 {
-    font-size: 1rem; /* Tamaño de fuente */
-    margin-bottom: 5px;
-    text-align: center;
-  }
-  
-  .tarjeta p {
-    font-size: 0.8rem; /* Tamaño de fuente */
-    text-align: center;
-  }
+
 
   section h2{
     padding-bottom: 10px;
   }
 
-  .apps {
-        /*se agranda la imagen cuando paso el mouse*/
-        overflow: hidden;
-        transition:0.8s ease;
-    }
-  
- .apps:hover{
-    transform: scale(1.04);
- }
- 
