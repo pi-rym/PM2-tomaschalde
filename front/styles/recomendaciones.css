@@ -17,14 +17,14 @@ article p {
   }
   
 /* Ocultar las opciones por defecto */
-.opcionesCines, .opcionesApps, .form-recomendaciones {
+.opcionesCines, .opcionesApps {
     display: none;
 }
   
 /* Mostrar las opciones cuando la sección está activa */
 .seccionCines.activo .opcionesCines,
 .seccionApps.activo .opcionesApps,
-.seccionRecomendaciones.activo .form-recomendaciones {
+.seccionRecomendaciones.activo{
     display: block;
 }
 
@@ -81,45 +81,4 @@ article p {
     transform: scale(1.04);
  }
  
-
-  /* Estilos para el formulario de recomendación adicional */
-form {
-    margin-top: 20px;
-  }
-  
-form label {
-    font-weight: bold;
-  }
-  
-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: none;
-  }
-  
-form input[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-form input[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-
-
-
-  
-
-
-  section h2{
-    padding-bottom: 10px;
-  }
 
