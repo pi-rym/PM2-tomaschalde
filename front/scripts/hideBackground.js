@@ -1,17 +1,17 @@
 //Cambiar fondo cuando se pasa el mouse por la imagen de las peliculas
-$('.containerCards').on('mouseenter', '.card', function() {
+const ocultar = $('.containerCards').on('mouseenter', '.card', function() {
+    
     const imageUrl = $(this).find('img').attr('src');
     $('body').css('background-image', `url(${imageUrl})`);
     $('article').css('opacity', 0); // Ocultar el título
-  });
-  
-  $('.containerCards').on('mouseleave', '.card', function() {
-    $('body').css('background-image', 'none');
-    $('article').css('opacity', 1); // Mostrar el título
+
   });
   
 
   
+
+module.exports = ocultar;
+
   /* 
   //Cambiar fondo cuando se pasa el mouse por la imagen de las peliculas
 window.onload = function() {

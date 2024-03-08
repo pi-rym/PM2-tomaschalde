@@ -1,21 +1,7 @@
-//Mostramos las peliculsa en la pagina
-const getFilms = require('./handler');
-getFilms();
-
-//Cambia el fondo del inicio cuando paso el mouse por la imagen de alguna de las peliculas
-const mostrar = require('./showBackground');
-const ocultar = require('./hideBackground');
-
-
-
-
-
-//Solucion con javascript puro
-/*
-// Seleccionamos el contenedor donde se agregarán las tarjetas
-const containerPeliculas = document.querySelector(".containerCards");
-
-function renderPeliculas(pelicula){
+//Solucion con jQuery
+const renderPeliculas = (pelicula) => {
+    // Seleccionamos el contenedor donde se agregarán las tarjetas
+    const containerPeliculas = document.querySelector(".containerCards");
     //Creo el contenedor que tendra a cada pelicula
     const movieElement = document.createElement('div');
     movieElement.classList.add('card');
@@ -30,9 +16,6 @@ function renderPeliculas(pelicula){
                         `
     
     containerPeliculas.appendChild(movieElement);
-  }
-    
-//Appendeamos todas las tarjetas ya construidas en el container de tarjetas
-tempData.forEach(renderPeliculas)
+}
 
-*/
+module.exports = renderPeliculas;
