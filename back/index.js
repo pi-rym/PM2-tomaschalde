@@ -1,7 +1,7 @@
 //Este modulo es el entry point, es quien 'prende la luz' una vez que todo arranca
 const app = require('./src/server');
 
-const PORT = 3001;
+const PORT = 3000;
 /*
     Necesitamos que nuestro servidor ya creado (server.js) tenga la capacidad de recibir solicitudes (quede funcionando a la espera 
     de solicitudes).

@@ -4,7 +4,7 @@ const movieRouter = Router();
 
 const movieController = require('../controllers/movieControllers'); //requerimos el controlador
 
-movieRouter.get('/', movieController.getAllMovies);
+movieRouter.get('/', movieController.getMovies);
 
 /*
   ¿Por que en movieRouter.get no ponemos como ruta /movies?

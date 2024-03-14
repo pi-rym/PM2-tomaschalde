@@ -1,4 +1,6 @@
 const express = require ('express'); // requerimos express (nos da una funcion)
+const morgan = require('morgan');
+const cors = require('cors');
 
 const app = express(); // Invocamos la funcion que nos entrega express y la guardo en server. Nuestro servidor "vive" dentro de server
 
@@ -10,6 +12,10 @@ const app = express(); // Invocamos la funcion que nos entrega express y la guar
 */
 
 const router = require('./routes/index');
+
+app.use(morgan('dev')); //En el parametro ponemos en que formato queremos la respuesta en la terminal. Dev es el formato mas util. Muestra en consola el camino que hace la request (que ruta recibio la solicitud, bajo que metodo y como respondió)
+app.use(cors()) // El servidor queda abierto a recibir solicitudes de cualquier lugar
+app.use(express.json()); //cuando recibe la solicitud (pasa por este middleware), la convierte en objeto de javascript
 
 app.use(router);
 
