@@ -1,6 +1,10 @@
 //Este modulo es el entry point, es quien 'prende la luz' una vez que todo arranca
 const app = require('./src/server');
 
+//requerimos la funcion para realizar la conexion de la base de datos
+const dbConnection = require('./src/config/dbConnection');
+
+
 const PORT = 3000;
 /*
     Necesitamos que nuestro servidor ya creado (server.js) tenga la capacidad de recibir solicitudes (quede funcionando a la espera 
@@ -15,6 +19,15 @@ const PORT = 3000;
     metodo listen, se puso a "escuchar" a nuestro servidor en el puerto indicado, entonces se ejecuta la callback.
  */
 
-app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`))
+    dbConnection().then((res) =>{
+
+        app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`))
+    
+    })
+    .catch((err) => {
+        console.log('Error al conectar la Base de Datos');
+    })
+    
+
 
 //El servidor ya quedo listo para recibir solicitudes
