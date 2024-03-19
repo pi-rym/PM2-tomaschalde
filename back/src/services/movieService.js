@@ -1,4 +1,4 @@
-const axios = require('axios');
+
 const {Movies} = require('../types/class');
 const Movie = require('../models/Movie');
 
@@ -11,7 +11,7 @@ module.exports = {
                 
                 const data = await Movie.find();
                 const movies = data.map((movie) => new Movies(movie));
-                console.log(movies);
+                
                 return movies;
 
             } catch (error) {
