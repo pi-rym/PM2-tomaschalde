@@ -4,6 +4,7 @@ module.exports = {
 
         ind: './scripts/index.js',
         recom: './scripts/recomendaciones.js',
+        crear: './scripts/crearPelicula.js'
 
     },    //Es el entry point, por donde quiero webpack arranque a recorrer.
     

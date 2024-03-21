@@ -1,10 +1,12 @@
 //Hacemos un enrutador para las movies
 const {Router} = require('express');
 const movieRouter = Router();
+const validateMovie = require('../middlewares/validateMovie')
 
-const movieController = require('../controllers/movieControllers'); //requerimos el controlador
+const { getMovies, postMovies } = require('../controllers/movieControllers'); //requerimos el controlador
 
-movieRouter.get('/', movieController.getMovies);
+movieRouter.get('/',getMovies);
+movieRouter.post('/',validateMovie,postMovies);
 
 /*
   ¿Por que en movieRouter.get no ponemos como ruta /movies?

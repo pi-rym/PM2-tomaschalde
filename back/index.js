@@ -6,7 +6,7 @@ const dbConnection = require('./src/config/dbConnection');
 
 
 require('dotenv').config();
-const {PORT} = process.env;
+const PORT = 3000;
 /*
     Necesitamos que nuestro servidor ya creado (server.js) tenga la capacidad de recibir solicitudes (quede funcionando a la espera 
     de solicitudes).

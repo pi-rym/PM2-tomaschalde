@@ -6,7 +6,9 @@ const movieSchema = new Schema({
     year: Number,
     director: String,
     duration: String,
-    genre: Array,
+    genre:{
+        type:[],
+    },
     rate: Number,
     poster: String
 })

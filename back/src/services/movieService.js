@@ -17,6 +17,15 @@ module.exports = {
             } catch (error) {
                 throw new Error(error);
             }
+    },
+
+    postMovieService: async (movie) => {
+        try {
+            const newMovie = await Movie.create(movie);
+            return newMovie;
+        } catch (error) {
+            throw Error (error.message)
+        }
     }
 
 }
